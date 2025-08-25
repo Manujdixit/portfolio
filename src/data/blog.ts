@@ -32,7 +32,16 @@ type DevToPost = {
 };
 
 function getMDXFiles(dir: string) {
-  return fs.readdirSync(dir).filter((file) => path.extname(file) === ".mdx");
+  try {
+    // Check if directory exists
+    if (!fs.existsSync(dir)) {
+      return [];
+    }
+    return fs.readdirSync(dir).filter((file) => path.extname(file) === ".mdx");
+  } catch (error) {
+    console.warn("Error reading content directory:", error);
+    return [];
+  }
 }
 
 // Fetch posts from dev.to API
