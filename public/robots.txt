@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://manujdixit.dev/sitemap.xml
+
+# Disallow admin areas if any
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
