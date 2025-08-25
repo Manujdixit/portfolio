@@ -2,9 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 const SPOTIFY_CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
 const SPOTIFY_CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
-const SPOTIFY_REDIRECT_URI =
-  process.env.SPOTIFY_REDIRECT_URI ||
-  "http://localhost:3000/api/spotify/callback";
+const SPOTIFY_REDIRECT_URI = process.env.SPOTIFY_REDIRECT_URI;
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -17,6 +15,12 @@ export async function GET(request: NextRequest) {
 
   if (!code) {
     return NextResponse.redirect(new URL("/?error=no_code", request.url));
+  }
+
+  if (!SPOTIFY_REDIRECT_URI) {
+    return NextResponse.redirect(
+      new URL("/?error=no_redirect_uri", request.url)
+    );
   }
 
   try {

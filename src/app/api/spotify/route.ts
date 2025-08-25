@@ -70,7 +70,7 @@ export async function GET(request: NextRequest) {
       new URLSearchParams({
         client_id: SPOTIFY_CLIENT_ID!,
         response_type: "code",
-        redirect_uri: SPOTIFY_REDIRECT_URI,
+        redirect_uri: SPOTIFY_REDIRECT_URI!,
         scope: scope,
       });
 
@@ -85,7 +85,7 @@ export async function GET(request: NextRequest) {
       new URLSearchParams({
         client_id: SPOTIFY_CLIENT_ID!,
         response_type: "code",
-        redirect_uri: SPOTIFY_REDIRECT_URI,
+        redirect_uri: SPOTIFY_REDIRECT_URI!,
         scope: scope,
       });
 
@@ -93,6 +93,7 @@ export async function GET(request: NextRequest) {
       message:
         "Copy this URL and visit it in your browser to authenticate. After authorization, you'll get the tokens to add to your .env.local file.",
       authUrl: authUrl,
+      currentRedirectUri: SPOTIFY_REDIRECT_URI,
       setupInstructions: [
         "1. Copy the authUrl above and paste it in your browser",
         "2. Authorize your Spotify account",

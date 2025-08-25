@@ -317,9 +317,31 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+      <section id="music-blend">
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 16}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  🎵 Music Blend
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Join My Music Discovery
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Connect with fellow music lovers! Join my Spotify Blend to
+                  discover new tracks together. When you visit, you can see what
+                  I'm currently listening to and join our shared music discovery
+                  group.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+        </div>
+      </section>
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 16}>
+          <BlurFade delay={BLUR_FADE_DELAY * 17}>
             <div className="space-y-3">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                 Contact
@@ -343,8 +365,7 @@ export default function Page() {
                   {" "}
                   send me an email
                 </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                and I'll respond whenever I can. I will ignore all soliciting.
               </p>
             </div>
           </BlurFade>
