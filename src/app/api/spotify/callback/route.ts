@@ -47,6 +47,17 @@ export async function GET(request: NextRequest) {
 
     const tokenData = await tokenResponse.json();
 
+    // Log tokens for the owner to copy to .env.local
+    console.log("🎵 SPOTIFY TOKENS RECEIVED!");
+    console.log("=============================");
+    console.log("Add these to your .env.local file:");
+    console.log(`SPOTIFY_OWNER_ACCESS_TOKEN=${tokenData.access_token}`);
+    if (tokenData.refresh_token) {
+      console.log(`SPOTIFY_OWNER_REFRESH_TOKEN=${tokenData.refresh_token}`);
+    }
+    console.log("=============================");
+    console.log("After adding these, restart your development server.");
+
     // Store tokens in cookies (you might want to use a more secure method)
     const response = NextResponse.redirect(new URL("/", request.url));
     response.cookies.set("spotify_access_token", tokenData.access_token, {

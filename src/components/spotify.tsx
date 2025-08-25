@@ -17,26 +17,18 @@ interface SpotifyTrack {
 }
 
 export default function Spotify() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentTrack, setCurrentTrack] = useState<SpotifyTrack | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasTokens, setHasTokens] = useState(true);
 
   useEffect(() => {
-    checkAuthStatus();
+    fetchCurrentTrack();
+
+    // Set up interval to fetch current track every 30 seconds
+    const interval = setInterval(fetchCurrentTrack, 30000);
+
+    return () => clearInterval(interval);
   }, []);
-
-  const checkAuthStatus = async () => {
-    // Check if we have a token stored
-    const hasToken = document.cookie.includes("spotify_access_token");
-    setIsAuthenticated(hasToken);
-
-    if (hasToken) {
-      fetchCurrentTrack();
-      // Set up interval to fetch current track every 30 seconds
-      const interval = setInterval(fetchCurrentTrack, 30000);
-      return () => clearInterval(interval);
-    }
-  };
 
   const fetchCurrentTrack = async () => {
     try {
@@ -46,9 +38,13 @@ export default function Spotify() {
       if (response.ok) {
         const data = await response.json();
         setCurrentTrack(data.isPlaying ? data : null);
+        setHasTokens(true);
+      } else if (response.status === 401) {
+        // No tokens configured or tokens expired
+        setHasTokens(false);
+        setCurrentTrack(null);
       } else {
-        // Token might be expired, try to refresh or re-authenticate
-        setIsAuthenticated(false);
+        // Other error, keep trying
         setCurrentTrack(null);
       }
     } catch (error) {
@@ -59,28 +55,16 @@ export default function Spotify() {
     }
   };
 
-  const handleAuth = async () => {
-    try {
-      const response = await fetch("/api/spotify?action=auth");
-      const data = await response.json();
-      window.location.href = data.authUrl;
-    } catch (error) {
-      console.error("Failed to get auth URL:", error);
-    }
-  };
-
-  if (!isAuthenticated) {
+  // If no tokens are configured, show setup message for owner
+  if (!hasTokens && !isLoading) {
     return (
-      <button
-        onClick={handleAuth}
-        className="size-12 rounded-full bg-green-500 hover:bg-green-400 transition-colors flex items-center justify-center"
-        title="Connect Spotify"
-      >
-        <Disc className="size-4 text-white" />
-      </button>
+      <div className="size-12 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+        <Disc className="size-4 text-gray-400" />
+      </div>
     );
   }
 
+  // If loading and no current track, show loading state
   if (isLoading && !currentTrack) {
     return (
       <div className="size-12 rounded-full bg-gray-200 animate-pulse flex items-center justify-center">
@@ -89,6 +73,7 @@ export default function Spotify() {
     );
   }
 
+  // If no track is playing, show static disc
   if (!currentTrack) {
     return (
       <div className="size-12 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
@@ -97,6 +82,7 @@ export default function Spotify() {
     );
   }
 
+  // Show rotating CD with album cover
   return (
     <div className="relative group">
       <div
