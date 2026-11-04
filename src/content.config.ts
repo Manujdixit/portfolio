@@ -52,4 +52,18 @@ const projects = defineCollection({
   }),
 });
 
-export const collections = { posts, pages, projects };
+// Sorted by `order`; shown on the homepage.
+const experience = defineCollection({
+  loader: file("src/content/experience.json"),
+  schema: z.object({
+    order: z.number(),
+    role: z.string(),
+    company: z.string(),
+    url: z.url().optional(),
+    period: z.string(),
+    summary: z.string(),
+    tech: z.array(z.string()).default([]),
+  }),
+});
+
+export const collections = { posts, pages, projects, experience };

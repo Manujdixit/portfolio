@@ -21,6 +21,7 @@ export default defineAstroPaperConfig({
     lightAndDarkMode: true,
     dynamicOgImage: true,
     showArchives: false,
+    showProjects: false,
     showBackButton: true,
     editPost: { enabled: false },
     search: "pagefind",

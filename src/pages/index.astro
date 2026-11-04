@@ -14,7 +14,7 @@ import { getSortedPosts } from "@/utils/getSortedPosts";
 import { useTranslations } from "@/i18n";
 import config from "@/config";
 
-const { socials, posts: postsConfig } = config;
+const { socials, posts: postsConfig, features } = config;
 
 const locale = Astro.currentLocale ?? config.site.lang;
 const t = useTranslations(locale);
@@ -24,6 +24,9 @@ const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 const homePath = getRelativeLocaleUrl(locale, "");
+const experience = (await getCollection("experience")).sort(
+  (a, b) => a.data.order - b.data.order
+);
 const featuredProjects = (await getCollection("projects"))
   .filter(({ data }) => data.featured)
   .sort((a, b) => a.data.order - b.data.order);
@@ -88,7 +91,39 @@ const personSchema = {
     </section>
 
     {
-      featuredProjects.length > 0 && (
+      experience.length > 0 && (
+        <section id="experience" class="border-border border-b pt-12 pb-6">
+          <h2 class="text-2xl font-semibold tracking-wide">Experience</h2>
+          <ul>
+            {experience.map(({ data }) => (
+              <li class="my-6">
+                <h3 class="text-lg font-medium">
+                  {data.role} ·{" "}
+                  {data.url ? (
+                    <a
+                      href={data.url}
+                      class="text-accent decoration-dashed underline-offset-4 hover:underline"
+                    >
+                      {data.company}
+                    </a>
+                  ) : (
+                    <span class="text-accent">{data.company}</span>
+                  )}
+                </h3>
+                <p class="text-sm opacity-80">{data.period}</p>
+                <p class="mt-1">{data.summary}</p>
+                {data.tech.length > 0 && (
+                  <p class="mt-1 text-sm opacity-80">{data.tech.join(" · ")}</p>
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      features.showProjects && featuredProjects.length > 0 && (
         <section id="projects" class="border-border border-b pt-12 pb-6">
           <h2 class="text-2xl font-semibold tracking-wide">
             {t.nav.projects}

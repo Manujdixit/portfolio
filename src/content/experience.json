@@ -1,0 +1,20 @@
+[
+  {
+    "id": "fulltime",
+    "order": 1,
+    "role": "Software Engineer",
+    "company": "Company Name",
+    "period": "Month 2026 – Present",
+    "summary": "TODO: what you built and owned here, with one measurable result.",
+    "tech": ["TypeScript", "Node.js", "PostgreSQL"]
+  },
+  {
+    "id": "internship",
+    "order": 2,
+    "role": "Software Engineer Intern",
+    "company": "Company Name",
+    "period": "Month 2025 – Month 2026",
+    "summary": "TODO: what you worked on during the internship and the impact.",
+    "tech": ["React", "Next.js", "TypeScript"]
+  }
+]
