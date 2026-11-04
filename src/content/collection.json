@@ -7,14 +7,6 @@
     "order": 0
   },
   {
-    "id": "listening-placeholder",
-    "type": "listening",
-    "title": "Song, album or podcast",
-    "creator": "Artist",
-    "why": "TODO: why it's on repeat.",
-    "order": 0
-  },
-  {
     "id": "film-the-fall-guy-2024",
     "order": 1,
     "type": "watching",
