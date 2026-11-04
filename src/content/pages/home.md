@@ -17,4 +17,4 @@ I've come to believe hobbies aren't a break from life; they're a big part of it.
 
 ## Let's catch up
 
-Whether it's work, a project idea, running, a movie recommendation, or just a casual chat, I'm always up for it. Reach out on [GitHub](https://github.com/Manujdixit), [DEV](https://dev.to/manujdixit), or [Medium](https://medium.com/@manujdixit04), and if you're in Gurgaon, coffee's on the table.
+Whether it's work, a project idea, running, a movie recommendation, or just a casual chat, I'm always up for it. Drop me an [email](mailto:manujdixit04@gmail.com) or message me on [LinkedIn](https://www.linkedin.com/in/manuj-dixit/), and if you're in Gurgaon, coffee's on the table. I also post on [GitHub](https://github.com/Manujdixit), [DEV](https://dev.to/manujdixit) and [Medium](https://medium.com/@manujdixit04).
