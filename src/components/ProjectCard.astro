@@ -1,0 +1,49 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+type Props = CollectionEntry<"projects">["data"] & { variant?: "h2" | "h3" };
+
+const { variant: Heading = "h2", title, description, tech, repo, demo } =
+  Astro.props;
+---
+
+<li class="my-6">
+  <Heading class="text-accent text-lg font-medium">
+    {
+      demo || repo ? (
+        <a
+          href={demo ?? repo}
+          class="decoration-dashed underline-offset-4 hover:underline"
+        >
+          {title}
+        </a>
+      ) : (
+        title
+      )
+    }
+  </Heading>
+  <p>{description}</p>
+  <p class="mt-1 text-sm opacity-80">
+    {tech.join(" · ")}
+    {
+      repo && (
+        <>
+          {" · "}
+          <a href={repo} class="underline underline-offset-4">
+            Code
+          </a>
+        </>
+      )
+    }
+    {
+      demo && (
+        <>
+          {" · "}
+          <a href={demo} class="underline underline-offset-4">
+            Live
+          </a>
+        </>
+      )
+    }
+  </p>
+</li>

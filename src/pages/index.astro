@@ -8,6 +8,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Socials from "@/components/Socials.astro";
 import Card from "@/components/Card.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import { getSortedPosts } from "@/utils/getSortedPosts";
 import { useTranslations } from "@/i18n";
@@ -23,6 +24,9 @@ const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 const homePath = getRelativeLocaleUrl(locale, "");
+const featuredProjects = (await getCollection("projects"))
+  .filter(({ data }) => data.featured)
+  .sort((a, b) => a.data.order - b.data.order);
 
 const personSchema = {
   "@context": "https://schema.org",
@@ -82,6 +86,25 @@ const personSchema = {
         )
       }
     </section>
+
+    {
+      featuredProjects.length > 0 && (
+        <section id="projects" class="border-border border-b pt-12 pb-6">
+          <h2 class="text-2xl font-semibold tracking-wide">
+            {t.nav.projects}
+          </h2>
+          <ul>
+            {featuredProjects.map(({ data }) => (
+              <ProjectCard variant="h3" {...data} />
+            ))}
+          </ul>
+          <LinkButton href={getRelativeLocaleUrl(locale, "projects")}>
+            {t.nav.projects}
+            <IconArrowRight class="inline-block rtl:-rotate-180" />
+          </LinkButton>
+        </section>
+      )
+    }
 
     {
       featuredPosts.length > 0 && (

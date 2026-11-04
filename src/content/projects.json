@@ -1,0 +1,77 @@
+[
+  {
+    "id": "resumio",
+    "order": 1,
+    "title": "Resumio",
+    "description": "Resume builder web app with accounts and saved resumes.",
+    "tech": [
+      "Next.js",
+      "TypeScript",
+      "Drizzle",
+      "PostgreSQL",
+      "Better Auth"
+    ],
+    "repo": "https://github.com/Manujdixit/resumio",
+    "demo": "https://resumebuild.cv",
+    "featured": true
+  },
+  {
+    "id": "realtime-todo",
+    "order": 2,
+    "title": "Realtime Collaborative Todo",
+    "description": "Full-stack todo app with real-time sync across group rooms, auth, QR-code group joining and documented REST API.",
+    "tech": [
+      "React",
+      "Socket.IO",
+      "Node.js",
+      "Kysely",
+      "Drizzle",
+      "PostgreSQL"
+    ],
+    "repo": "https://github.com/Manujdixit/realtime-todo",
+    "demo": "https://socketio-kysely-drizzle-todo.vercel.app",
+    "featured": true
+  },
+  {
+    "id": "comp-crawl",
+    "order": 3,
+    "title": "Comp Crawl",
+    "description": "Competitive intelligence tool that crawls competitor sites, tracks changes in PostgreSQL and emails weekly LLM-summarised digests.",
+    "tech": [
+      "Python",
+      "Crawl4AI",
+      "SQLAlchemy",
+      "PostgreSQL",
+      "LiteLLM"
+    ],
+    "repo": "https://github.com/Manujdixit/comp-crawl",
+    "featured": true
+  },
+  {
+    "id": "go-url-shortener",
+    "order": 4,
+    "title": "URL Shortener",
+    "description": "URL shortening service with custom aliases, expiry, rate limiting and request counting.",
+    "tech": [
+      "Go",
+      "Fiber",
+      "Redis",
+      "Docker"
+    ],
+    "repo": "https://github.com/Manujdixit/go-url-shortner"
+  },
+  {
+    "id": "nestjs-drizzle-kysely",
+    "order": 5,
+    "title": "NestJS + Drizzle + Kysely Starter",
+    "description": "Type-safe backend starter: Drizzle for schema and migrations, Kysely for complex queries, auto-generated DB types.",
+    "tech": [
+      "NestJS",
+      "TypeScript",
+      "Drizzle",
+      "Kysely",
+      "PostgreSQL"
+    ],
+    "repo": "https://github.com/Manujdixit/nestjs-drizzle-kysely"
+  }
+]

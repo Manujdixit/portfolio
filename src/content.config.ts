@@ -1,6 +1,6 @@
 import { defineCollection } from "astro:content";
 import { z } from "astro/zod";
-import { glob } from "astro/loaders";
+import { file, glob } from "astro/loaders";
 import config from "@/config";
 
 export const BLOG_PATH = "src/content/posts";
@@ -38,4 +38,18 @@ const pages = defineCollection({
   }),
 });
 
-export const collections = { posts, pages };
+// Sorted by `order`; `featured` ones also show on the homepage.
+const projects = defineCollection({
+  loader: file("src/content/projects.json"),
+  schema: z.object({
+    order: z.number(),
+    title: z.string(),
+    description: z.string(),
+    tech: z.array(z.string()),
+    repo: z.url().optional(),
+    demo: z.url().optional(),
+    featured: z.boolean().optional(),
+  }),
+});
+
+export const collections = { posts, pages, projects };
