@@ -23,9 +23,24 @@ const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 const homePath = getRelativeLocaleUrl(locale, "");
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: config.site.author,
+  url: config.site.url,
+  jobTitle: "Web Developer",
+  sameAs: socials.filter(s => s.name !== "mail").map(s => s.url),
+};
 ---
 
-<Layout>
+<Layout title={`${config.site.author} | Web Developer`}>
+  <script
+    slot="head"
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify(personSchema)}
+  />
   <Header />
   <main
     id="main-content"
@@ -35,7 +50,7 @@ const homePath = getRelativeLocaleUrl(locale, "");
   >
     <section id="hero" class="border-border border-b pt-8 pb-6">
       <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        Hi, I'm Manuj
+        Hi, I'm Manuj Dixit
       </h1>{" "}
       <a
         target="_blank"

@@ -1,6 +1,6 @@
 ---
 title: "About"
-description: "A bit about me."
+description: "About Manuj Dixit, web developer: what I build, what I'm learning and how to reach me."
 ---
 
 Hi, I'm Manuj Dixit, a developer who likes building things for the web and figuring out how stuff works under the hood.

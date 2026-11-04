@@ -5,7 +5,8 @@ export default defineAstroPaperConfig({
     // TODO: set to the real deploy URL
     url: "https://manujdixit.example.com/",
     title: "Manuj Dixit",
-    description: "Manuj Dixit's portfolio and blog.",
+    description:
+      "Manuj Dixit is a web developer building with TypeScript and modern frontend tools. Projects, experiments and notes.",
     author: "Manuj Dixit",
     profile: "https://github.com/Manujdixit",
     ogImage: "default-og.jpg",
