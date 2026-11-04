@@ -9,6 +9,8 @@ I also write about what I learn while building, from [system design](/posts/soci
 
 ## Off the keyboard
 
+Last year I worked from home. This year I moved to Gurgaon, and on a friend's suggestion I started going to the gym. It genuinely changed how I see the world.
+
 I've run a half marathon, and I'm eyeing a full one next, then an Ironman (fingers crossed 🤞). I'm also close to unlocking the handstand. The rest of the time it's movies, music, and the Bhagavad Gita, which reads differently every time I come back to it.
 
 Say hi on [GitHub](https://github.com/Manujdixit), [DEV](https://dev.to/manujdixit), or [Medium](https://medium.com/@manujdixit04).
