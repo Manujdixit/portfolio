@@ -1,9 +1,11 @@
 ---
 title: "Hi, I'm Manuj."
-description: "Manuj Dixit is an AI and automation engineer and full-stack developer who writes about web development, backend and AI, and runs, reads and watches movies on the side."
+description: "Manuj Dixit is an AI and automation engineer and freelance full-stack developer building websites, AI chatbots and automations. Writes about web development, backend and AI; runs and watches movies on the side."
 ---
 
 I'm an **AI and Automation Engineer at IILM**, working on LLM inference, internal tools and automations. I've also built full-stack web apps, APIs, custom CMSes and AI chatbots. The details are in [my portfolio](/portfolio/).
+
+On the side, I freelance: websites, AI chatbots, and automations that save people hours of repetitive work. If you've got something you want built, [let's talk](#lets-catch-up).
 
 I also write about what I learn while building. Read them in [my posts](/posts/).
 
@@ -17,4 +19,4 @@ I've come to believe hobbies aren't a break from life; they're a big part of it.
 
 ## Let's catch up
 
-Whether it's work, a project idea, running, a movie recommendation, or just a casual chat, I'm always up for it. Drop me an [email](mailto:manujdixit04@gmail.com) or message me on [LinkedIn](https://www.linkedin.com/in/manuj-dixit/), and if you're in Gurgaon, coffee's on the table.
+Whether it's work, a freelance project, an idea you want to build, running, a movie recommendation, or just a casual chat, I'm always up for it. Drop me an [email](mailto:manujdixit04@gmail.com) or message me on [LinkedIn](https://www.linkedin.com/in/manuj-dixit/), and if you're in Gurgaon, coffee's on the table.
