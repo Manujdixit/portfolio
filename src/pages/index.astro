@@ -55,9 +55,11 @@ const personSchema = {
       {
         hasGreeting ? (
           <>
+            <span class="sr-only">Hi</span>
             <span
               id="greeting"
-              class="inline-block transition-opacity duration-150"
+              aria-hidden="true"
+              class="inline-block [perspective:400px]"
             >
               Hi
             </span>
@@ -83,7 +85,8 @@ const personSchema = {
 </Layout>
 
 <script>
-  // Cycle "Hi" through other languages once, then land back on "Hi".
+  // Roll "Hi" through other languages once, then land back on "Hi". Each
+  // letter flips up from below with a small stagger (keyframes below).
   const GREETINGS = [
     "नमस्ते",
     "Hola",
@@ -93,21 +96,50 @@ const personSchema = {
     "Hallo",
     "Hi",
   ];
+  const STAGGER = 30; // ms between letters
+  const ROLL = 200; // ms per letter
+  const HOLD = 220; // ms a word stays fully visible
+
+  // Devanagari conjuncts break if split, so keep that word whole.
+  const letters = (word: string) =>
+    /[ऀ-ॿ]/.test(word)
+      ? [word]
+      : Array.from(new Intl.Segmenter().segment(word), s => s.segment);
+
+  function show(el: HTMLElement, word: string) {
+    el.replaceChildren(
+      ...letters(word).map((ch, i) => {
+        const span = document.createElement("span");
+        span.className = "greet-letter";
+        span.textContent = ch;
+        span.style.animation = `greet-in ${ROLL}ms ease-out ${i * STAGGER}ms both`;
+        return span;
+      })
+    );
+    return ROLL + (el.children.length - 1) * STAGGER;
+  }
+
+  function hide(el: HTMLElement) {
+    Array.from(el.children as HTMLCollectionOf<HTMLElement>).forEach(
+      (span, i) =>
+        (span.style.animation = `greet-out ${ROLL}ms ease-in ${i * STAGGER}ms both`)
+    );
+    return ROLL + (el.children.length - 1) * STAGGER;
+  }
 
   document.addEventListener("astro:page-load", () => {
     const greeting = document.querySelector<HTMLElement>("#greeting");
     if (!greeting || matchMedia("(prefers-reduced-motion: reduce)").matches)
       return;
     let i = 0;
-    const next = () => {
-      greeting.style.opacity = "0";
+    const step = () => {
       setTimeout(() => {
-        greeting.textContent = GREETINGS[i++];
-        greeting.style.opacity = "1";
-        if (i < GREETINGS.length) setTimeout(next, 450);
-      }, 150);
+        const inTime = show(greeting, GREETINGS[i++]);
+        if (i < GREETINGS.length) setTimeout(step, inTime + HOLD);
+      }, hide(greeting));
     };
-    next();
+    show(greeting, "Hi");
+    setTimeout(step, HOLD);
   });
 
   document.addEventListener("astro:page-load", () => {
@@ -119,3 +151,30 @@ const personSchema = {
     }
   });
 </script>
+
+<style is:global>
+  .greet-letter {
+    display: inline-block;
+    white-space: pre;
+  }
+  @keyframes greet-in {
+    from {
+      transform: translateY(60%) rotateX(-90deg);
+      opacity: 0;
+    }
+    to {
+      transform: none;
+      opacity: 1;
+    }
+  }
+  @keyframes greet-out {
+    from {
+      transform: none;
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-60%) rotateX(90deg);
+      opacity: 0;
+    }
+  }
+</style>
