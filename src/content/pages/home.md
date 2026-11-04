@@ -1,26 +1,14 @@
 ---
 title: "Hi, I'm Manuj."
-description: "Manuj Dixit: AI and automation engineer by day; runner, movie buff, music lover and Bhagavad Gita reader the rest of the time."
+description: "Manuj Dixit is an AI and automation engineer and full-stack developer who writes about web development, backend and AI, and runs, reads and watches movies on the side."
 ---
 
-I build software for a living. This page is about everything else.
+I'm an **AI and Automation Engineer at IILM**, working on LLM inference, internal tools and automations. Before that I built Next.js apps, APIs, custom CMSes and AI chatbots at **Truescholar**, and interned at **Cohyve**. The details are in [my portfolio](/portfolio/).
 
-For the work stuff, see [my portfolio](/portfolio/). For what I'm learning, read [my posts](/posts/).
+I also write about what I learn while building, from [system design](/posts/social-media-feed-algorithm-part-1/) to [idempotency](/posts/idempotency-event-driven-systems/) to [scoring 100 on Lighthouse](/posts/lighthouse-100-performance/). More in [my posts](/posts/).
 
-## Side quests
+## Off the keyboard
 
-- **Ran a half marathon.** 21.1 km. My legs still remember. Next up: a full marathon, and then an Ironman. Fingers crossed. 🤞
-- **About to unlock the handstand.** Almost there. The wall and I are on close terms.
-- **Movies.** Always up for a good one, and always ready to argue about the ending.
-- **Music.** Pretty much always on, whether I'm coding, running or doing nothing.
-- **The Bhagavad Gita.** I keep coming back to it. It's a different book every time I read it.
-
-## By day
-
-I'm an **AI and Automation Engineer at IILM**, working on LLM inference, internal tools and automations. Before that I built web apps, APIs and AI chatbots at **Truescholar**, and interned at **Cohyve**. The full story is in [my portfolio](/portfolio/).
-
-## Now
-
-Getting that handstand, building AI tooling, and writing more.
+I've run a half marathon, and I'm eyeing a full one next, then an Ironman (fingers crossed 🤞). I'm also close to unlocking the handstand. The rest of the time it's movies, music, and the Bhagavad Gita, which reads differently every time I come back to it.
 
 Say hi on [GitHub](https://github.com/Manujdixit), [DEV](https://dev.to/manujdixit), or [Medium](https://medium.com/@manujdixit04).
