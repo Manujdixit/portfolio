@@ -2,8 +2,7 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    // TODO: set to the real deploy URL
-    url: "https://manujdixit.example.com/",
+    url: "https://manujdixit.vercel.app/",
     title: "Manuj Dixit",
     description:
       "Manuj Dixit is a web developer building with TypeScript and modern frontend tools. Projects, experiments and notes.",
