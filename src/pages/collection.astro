@@ -24,10 +24,10 @@ const items = (await getCollection("collection")).sort(
 const sections = [
   {
     type: "watching",
-    heading: "Watching",
+    heading: "Movies I'd recommend",
     more: {
       href: "https://letterboxd.com/sensational_01/likes/films/",
-      label: "Films I've liked on Letterboxd",
+      label: "Everything I've liked on Letterboxd",
     },
   },
   { type: "listening", heading: "Favourite songs" },
@@ -49,7 +49,11 @@ const sections = [
       sections.map(section => {
         const { type, heading } = section;
         const more = "more" in section ? section.more : undefined;
-        const list = items.filter(({ data }) => data.type === type);
+        // Films: only the liked ones flagged `recommend`.
+        const list = items.filter(
+          ({ data }) =>
+            data.type === type && (type !== "watching" || data.recommend)
+        );
         return (
           list.length > 0 && (
             <section class="mb-10">

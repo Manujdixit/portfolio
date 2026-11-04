@@ -18,7 +18,8 @@
     "order": 2,
     "type": "watching",
     "title": "12th Fail (2023)",
-    "url": "https://letterboxd.com/film/12th-fail/"
+    "url": "https://letterboxd.com/film/12th-fail/",
+    "recommend": true
   },
   {
     "id": "film-your-name",
@@ -60,7 +61,8 @@
     "order": 8,
     "type": "watching",
     "title": "Ford v Ferrari (2019)",
-    "url": "https://letterboxd.com/film/ford-v-ferrari/"
+    "url": "https://letterboxd.com/film/ford-v-ferrari/",
+    "recommend": true
   },
   {
     "id": "film-the-dictator-2012",
@@ -130,7 +132,8 @@
     "order": 18,
     "type": "watching",
     "title": "The Social Network (2010)",
-    "url": "https://letterboxd.com/film/the-social-network/"
+    "url": "https://letterboxd.com/film/the-social-network/",
+    "recommend": true
   },
   {
     "id": "film-kill-bill-vol-1",
@@ -151,21 +154,24 @@
     "order": 21,
     "type": "watching",
     "title": "Parasite (2019)",
-    "url": "https://letterboxd.com/film/parasite-2019/"
+    "url": "https://letterboxd.com/film/parasite-2019/",
+    "recommend": true
   },
   {
     "id": "film-whiplash-2014",
     "order": 22,
     "type": "watching",
     "title": "Whiplash (2014)",
-    "url": "https://letterboxd.com/film/whiplash-2014/"
+    "url": "https://letterboxd.com/film/whiplash-2014/",
+    "recommend": true
   },
   {
     "id": "film-good-will-hunting",
     "order": 23,
     "type": "watching",
     "title": "Good Will Hunting (1997)",
-    "url": "https://letterboxd.com/film/good-will-hunting/"
+    "url": "https://letterboxd.com/film/good-will-hunting/",
+    "recommend": true
   },
   {
     "id": "film-dead-poets-society",

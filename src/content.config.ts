@@ -76,6 +76,8 @@ const collection = defineCollection({
     url: z.url().optional(),
     order: z.number(),
     why: z.string().optional(),
+    // Shown on the homepage as a recommendation.
+    recommend: z.boolean().optional(),
   }),
 });
 
