@@ -6,6 +6,17 @@ import { useTranslations } from "@/i18n";
 const t = useTranslations(Astro.currentLocale);
 ---
 
+<nav
+  aria-label="Article sections"
+  class="group/toc fixed inset-e-3 top-1/2 z-40 hidden -translate-y-1/2 lg:block"
+>
+  <ul
+    id="toc-rail"
+    class="hover:bg-background hover:border-border flex max-h-[70vh] flex-col items-end gap-1 overflow-y-auto rounded-xl border border-transparent p-2 transition-colors hover:shadow-lg"
+  >
+  </ul>
+</nav>
+
 <div
   id="btt-btn-container"
   class:list={[
@@ -50,6 +61,35 @@ const t = useTranslations(Astro.currentLocale);
       document.documentElement.scrollTop = 0;
     });
 
+    // Section rail: one dash per heading; hovering the rail reveals titles.
+    const rail = document.querySelector("#toc-rail");
+    const headings = Array.from(
+      document.querySelectorAll("#article h2, #article h3")
+    );
+    const items = headings.map(heading => {
+      const title = heading.textContent.trim();
+      const li = document.createElement("li");
+      li.className = "group/item";
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.title = title;
+      btn.className =
+        "flex w-full items-center justify-end gap-3 rounded px-1 py-1 text-sm text-foreground/60 hover:text-foreground group-data-active/item:text-accent";
+      const label = document.createElement("span");
+      label.className = "hidden max-w-56 truncate group-hover/toc:block";
+      label.textContent = title;
+      const dash = document.createElement("span");
+      dash.className = `block h-0.5 shrink-0 rounded-full bg-current ${heading.tagName === "H3" ? "w-2" : "w-3"} group-data-active/item:w-5`;
+      btn.append(label, dash);
+      btn.addEventListener("click", () =>
+        heading.scrollIntoView({ behavior: "smooth" })
+      );
+      li.append(btn);
+      rail?.append(li);
+      return li;
+    });
+    if (!items.length) rail?.closest("nav")?.remove();
+
     let lastVisible = null;
     function handleScroll() {
       const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
@@ -60,6 +100,12 @@ const t = useTranslations(Astro.currentLocale);
         "background-image",
         `conic-gradient(var(--accent), var(--accent) ${scrollPercent}%, transparent ${scrollPercent}%)`
       );
+      // Active section = last heading scrolled past the top 120px.
+      let active = 0;
+      headings.forEach((heading, i) => {
+        if (heading.getBoundingClientRect().top <= 120) active = i;
+      });
+      items.forEach((item, i) => item.toggleAttribute("data-active", i === active));
 
       const isVisible = scrollTop / scrollTotal > 0.3;
 
@@ -82,6 +128,7 @@ const t = useTranslations(Astro.currentLocale);
         ticking = true;
       }
     });
+    handleScroll();
   }
   backToTop();
 </script>
