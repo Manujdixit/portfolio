@@ -9,9 +9,9 @@ I also write about what I learn while building. Read them in [my posts](/posts/)
 
 ## Off the keyboard
 
-Last year I was working from home, which effected very much physically and mentally. This year I moved to Gurgaon for job, and on a friend's suggestion I started going to the gym. It genuinely changed how I now percieve the world around me.
+Last year I worked from home, and my whole day was chair, screen, repeat. I barely moved, and it took a toll on me, physically and mentally. This year I moved to Gurgaon for work, binged a lot of fitness content, and started working out. It genuinely changed how I see the world around me.
 
-Now, I've run a half marathon, and I'm eyeing a full one soon, unlocked handstand, about to unlock muscle up. The rest of the time it's movies, music. Also I am reading Bhagavad Gita, which reads differently every time I come back to it. I keep a list of films I'd recommend and what I'm reading in [my collection](/collection/).
+Now, I've ran a half marathon, and I'm eyeing a full one soon, unlocked handstand, about to unlock muscle up. The rest of the time it's movies, music. Also I am reading Bhagavad Gita, which reads differently every time I come back to it. I keep a list of films I'd recommend and what I'm reading in [my collection](/collection/).
 
 I've come to believe hobbies aren't a break from life; they're a big part of it. Work gives you a title/money, but hobbies give you energy, perspective, and a version of yourself that doesn't depend on how the last deploy went.
 
