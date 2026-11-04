@@ -1,0 +1,25 @@
+[
+  {
+    "id": "bhagavad-gita",
+    "type": "reading",
+    "title": "Bhagavad Gita",
+    "added": "2026-11-04",
+    "why": "I keep coming back to it, and it reads differently every time. TODO: a verse or idea that stuck with you."
+  },
+  {
+    "id": "watching-placeholder",
+    "type": "watching",
+    "title": "Movie or show title",
+    "creator": "Director / creator",
+    "added": "2026-11-04",
+    "why": "TODO: why you liked it, in a line or two."
+  },
+  {
+    "id": "listening-placeholder",
+    "type": "listening",
+    "title": "Song, album or podcast",
+    "creator": "Artist",
+    "added": "2026-11-04",
+    "why": "TODO: why it's on repeat."
+  }
+]

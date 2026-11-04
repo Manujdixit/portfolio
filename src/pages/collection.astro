@@ -1,0 +1,67 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import config from "@/config";
+
+const items = (await getCollection("collection")).sort(
+  (a, b) => b.data.added.valueOf() - a.data.added.valueOf()
+);
+
+const sections = [
+  { type: "watching", heading: "Watching" },
+  { type: "listening", heading: "Listening" },
+  { type: "reading", heading: "Reading" },
+] as const;
+---
+
+<Layout
+  title={`Collection | ${config.site.title}`}
+  description={`What ${config.site.author} is watching, listening to and reading right now, and why.`}
+>
+  <Header />
+  <Breadcrumb />
+  <Main
+    pageTitle="Collection"
+    pageDesc="What I'm watching, listening to and reading, and why I liked it."
+  >
+    {
+      sections.map(({ type, heading }) => {
+        const list = items.filter(({ data }) => data.type === type);
+        return (
+          list.length > 0 && (
+            <section class="mb-10">
+              <h2 class="text-2xl font-semibold tracking-wide">{heading}</h2>
+              <ul>
+                {list.map(({ data }) => (
+                  <li class="my-6">
+                    <h3 class="text-accent text-lg font-medium">
+                      {data.url ? (
+                        <a
+                          href={data.url}
+                          class="decoration-dashed underline-offset-4 hover:underline"
+                        >
+                          {data.title}
+                        </a>
+                      ) : (
+                        data.title
+                      )}
+                    </h3>
+                    {data.creator && (
+                      <p class="text-sm opacity-80">{data.creator}</p>
+                    )}
+                    <p class="mt-1">{data.why}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )
+        );
+      })
+    }
+  </Main>
+  <Footer />
+</Layout>

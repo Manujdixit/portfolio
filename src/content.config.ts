@@ -66,4 +66,23 @@ const experience = defineCollection({
   }),
 });
 
-export const collections = { posts, pages, projects, experience };
+// What I'm watching, listening to and reading; newest first.
+const collection = defineCollection({
+  loader: file("src/content/collection.json"),
+  schema: z.object({
+    type: z.enum(["watching", "listening", "reading"]),
+    title: z.string(),
+    creator: z.string().optional(),
+    url: z.url().optional(),
+    added: z.coerce.date(),
+    why: z.string(),
+  }),
+});
+
+export const collections = {
+  posts,
+  pages,
+  projects,
+  experience,
+  collection,
+};

@@ -5,6 +5,7 @@ export interface UIStrings {
     projects: string;
     tags: string;
     portfolio: string;
+    collection: string;
     archives: string;
     search: string;
   };
