@@ -33,14 +33,5 @@
     "period": "April 2026 – Present",
     "summary": "Worked on authentication, API integrations and a notification system, across both frontend and backend development.",
     "tech": []
-  },
-  {
-    "id": "third",
-    "order": 3,
-    "role": "Software Engineer",
-    "company": "Company Name",
-    "period": "Month 20XX – Month 20XX",
-    "summary": "",
-    "tech": []
   }
 ]
