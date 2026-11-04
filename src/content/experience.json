@@ -11,9 +11,9 @@
   {
     "id": "fulltime-1",
     "order": 2,
-    "role": "Software Engineer",
+    "role": "Software Engineer Intern → Software Engineer",
     "company": "Truescholar Pvt. Ltd.",
-    "period": "July 2025 – March 2026",
+    "period": "Month 2025 – Month 2026 (1 yr intern, 4 mo full-time)",
     "summary": "Built Next.js and React web applications, developed APIs and modeled databases, built custom CMSes, worked on programmatic SEO, and built AI chatbots and AI-powered applications.",
     "tech": [
       "Next.js",
