@@ -41,15 +41,15 @@
     "order": 8,
     "type": "watching",
     "title": "The Godfather (1972)",
-    "url": "https://letterboxd.com/film/the-godfather/",
-    "recommend": true
+    "url": "https://letterboxd.com/film/the-godfather/"
   },
   {
     "id": "film-the-godfather-part-ii",
     "order": 106,
     "type": "watching",
     "title": "The Godfather Part II (1974)",
-    "url": "https://letterboxd.com/film/the-godfather-part-ii/"
+    "url": "https://letterboxd.com/film/the-godfather-part-ii/",
+    "recommend": true
   },
   {
     "id": "film-obsession-2025",
