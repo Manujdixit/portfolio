@@ -11,9 +11,9 @@
   {
     "id": "fulltime-1",
     "order": 2,
-    "role": "Software Engineer Intern → Software Engineer",
+    "role": "Software Engineer",
     "company": "Truescholar Pvt. Ltd.",
-    "period": "Month 2025 – Month 2026 (1 yr intern, 4 mo full-time)",
+    "period": "July 2025 – March 2026",
     "summary": "Built Next.js and React web applications, developed APIs and modeled databases, built custom CMSes, worked on programmatic SEO, and built AI chatbots and AI-powered applications.",
     "tech": [
       "Next.js",
@@ -24,5 +24,23 @@
       "SQL",
       "AI / LLMs"
     ]
+  },
+  {
+    "id": "internship",
+    "order": 3,
+    "role": "Full Stack Developer Intern",
+    "company": "Cohyve",
+    "period": "April 2026 – Present",
+    "summary": "Worked on authentication, API integrations and a notification system, across both frontend and backend development.",
+    "tech": []
+  },
+  {
+    "id": "third",
+    "order": 3,
+    "role": "Software Engineer",
+    "company": "Company Name",
+    "period": "Month 20XX – Month 20XX",
+    "summary": "",
+    "tech": []
   }
 ]
