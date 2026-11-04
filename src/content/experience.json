@@ -2,19 +2,27 @@
   {
     "id": "fulltime",
     "order": 1,
-    "role": "Software Engineer",
-    "company": "Company Name",
-    "period": "Month 2026 – Present",
-    "summary": "TODO: what you built and owned here, with one measurable result.",
-    "tech": ["TypeScript", "Node.js", "PostgreSQL"]
+    "role": "AI and Automation Engineer",
+    "company": "IILM",
+    "period": "April 2026 – Present",
+    "summary": "Working on LLM inference, building internal tools, and developing automation and workflows to enhance productivity and efficiency.",
+    "tech": []
   },
   {
-    "id": "internship",
+    "id": "fulltime-1",
     "order": 2,
-    "role": "Software Engineer Intern",
-    "company": "Company Name",
-    "period": "Month 2025 – Month 2026",
-    "summary": "TODO: what you worked on during the internship and the impact.",
-    "tech": ["React", "Next.js", "TypeScript"]
+    "role": "Software Engineer",
+    "company": "Truescholar Pvt. Ltd.",
+    "period": "July 2025 – March 2026",
+    "summary": "Built Next.js and React web applications, developed APIs and modeled databases, built custom CMSes, worked on programmatic SEO, and built AI chatbots and AI-powered applications.",
+    "tech": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "REST APIs",
+      "SQL",
+      "AI / LLMs"
+    ]
   }
 ]
