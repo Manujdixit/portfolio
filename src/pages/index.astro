@@ -16,6 +16,9 @@ if (!home) {
 }
 
 const { Content } = await render(home);
+// "Hi" in the title gets the greeting animation; the rest stays static.
+const titleRest = home.data.title.replace(/^Hi/, "");
+const hasGreeting = titleRest !== home.data.title;
 const { socials } = config;
 const locale = Astro.currentLocale ?? config.site.lang;
 const homePath = getRelativeLocaleUrl(locale, "");
@@ -49,17 +52,64 @@ const personSchema = {
     class="app-layout pt-8 pb-12"
   >
     <h1 class="my-4 text-4xl font-bold sm:my-8 sm:text-5xl">
-      {home.data.title}
+      {
+        hasGreeting ? (
+          <>
+            <span
+              id="greeting"
+              class="inline-block transition-opacity duration-150"
+            >
+              Hi
+            </span>
+            {titleRest}
+          </>
+        ) : (
+          home.data.title
+        )
+      }
     </h1>
     <div class="app-prose">
       <Content />
     </div>
-    {socials.length > 0 && <div class="mt-8"><Socials /></div>}
+    {
+      socials.length > 0 && (
+        <div class="mt-8">
+          <Socials />
+        </div>
+      )
+    }
   </main>
   <Footer />
 </Layout>
 
 <script>
+  // Cycle "Hi" through other languages once, then land back on "Hi".
+  const GREETINGS = [
+    "नमस्ते",
+    "Hola",
+    "Bonjour",
+    "Ciao",
+    "こんにちは",
+    "Hallo",
+    "Hi",
+  ];
+
+  document.addEventListener("astro:page-load", () => {
+    const greeting = document.querySelector<HTMLElement>("#greeting");
+    if (!greeting || matchMedia("(prefers-reduced-motion: reduce)").matches)
+      return;
+    let i = 0;
+    const next = () => {
+      greeting.style.opacity = "0";
+      setTimeout(() => {
+        greeting.textContent = GREETINGS[i++];
+        greeting.style.opacity = "1";
+        if (i < GREETINGS.length) setTimeout(next, 450);
+      }, 150);
+    };
+    next();
+  });
+
   document.addEventListener("astro:page-load", () => {
     const indexLayout = (document.querySelector("#main-content") as HTMLElement)
       ?.dataset;
