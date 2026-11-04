@@ -58,13 +58,6 @@ const sections = [
           list.length > 0 && (
             <section class="mb-10">
               <h2 class="text-2xl font-semibold tracking-wide">{heading}</h2>
-              {more && (
-                <p class="mt-1 text-sm">
-                  <a href={more.href} class="underline underline-offset-4">
-                    {more.label}
-                  </a>
-                </p>
-              )}
               <ul>
                 {list.map(({ data }) => (
                   <li class="my-6">
@@ -87,6 +80,13 @@ const sections = [
                   </li>
                 ))}
               </ul>
+              {more && (
+                <p class="text-sm">
+                  <a href={more.href} class="underline underline-offset-4">
+                    {more.label}
+                  </a>
+                </p>
+              )}
             </section>
           )
         );
