@@ -9,7 +9,7 @@ I also write about what I learn while building. Read them in [my posts](/posts/)
 
 ## Off the keyboard
 
-Last year I worked from home, and my whole day was chair, screen, repeat. I barely moved, and it took a toll on me, physically and mentally. This year I moved to Gurgaon for work, binged a lot of fitness content, and started working out. It genuinely changed how I see the world around me.
+Last year I worked from home, and my whole day was chair, screen, repeat. I barely moved, and it took a toll on me, physically and mentally. This year I moved to Gurgaon for work, binged a lot of fitness content, and started working out. It genuinely changed how now I see the world around me.
 
 Now, I've ran a half marathon, and I'm eyeing a full one soon, unlocked handstand, about to unlock muscle up. The rest of the time it's movies, music. Also I am reading Bhagavad Gita, which reads differently every time I come back to it. I keep a list of films I'd recommend and what I'm reading in [my collection](/collection/).
 
