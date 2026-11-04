@@ -2,7 +2,7 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://portfolio-vx5b.vercel.app/",
+    url: "https://www.manujdixit.com/",
     title: "Manuj Dixit",
     description:
       "Manuj Dixit is a web developer building with TypeScript and modern frontend tools. Projects, experiments and notes.",
