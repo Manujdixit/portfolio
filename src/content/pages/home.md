@@ -1,40 +1,26 @@
 ---
 title: "Hi, I'm Manuj."
-description: "Manuj Dixit is an AI and automation engineer and full-stack developer. Here's how I got here, what I'm building now, and what I write about."
+description: "Manuj Dixit: AI and automation engineer by day; runner, movie buff, music lover and Bhagavad Gita reader the rest of the time."
 ---
 
-I build things for the web, and lately, things that think.
+I build software for a living. This page is about everything else.
 
-Right now I'm an **AI and Automation Engineer at IILM**, working on LLM inference, internal tools, and automations that take busywork off people's plates.
+For the work stuff, see [my portfolio](/portfolio/). For what I'm learning, read [my posts](/posts/).
 
-You can read [my posts](/posts/) or see [my portfolio](/portfolio/).
+## Side quests
 
-## How it started
+- **Ran a half marathon.** 21.1 km. My legs still remember.
+- **About to unlock the handstand.** Almost there. The wall and I are on close terms.
+- **Movies.** Always up for a good one, and always ready to argue about the ending.
+- **Music.** Pretty much always on, whether I'm coding, running or doing nothing.
+- **The Bhagavad Gita.** I keep coming back to it. It's a different book every time I read it.
 
-In 2024 I got curious about Go. I built REST APIs, JWT auth, and a URL shortener on Redis, and wrote down what I learned:
+## By day
 
-- [Lets GO!](/posts/lets-go/)
-
-In March 2025 I got my first internship, as a full-stack developer at **Cohyve**, working on authentication, API integrations, and a notification system.
-
-## Shipping for real
-
-In June 2025 I joined **Truescholar** as a software engineer. That's where I learned to ship: Next.js apps, APIs and database models, custom CMSes, programmatic SEO, and AI chatbots.
-
-Chasing page speed there turned into a post:
-
-- [Scoring 100 on Lighthouse (Performance focused)](/posts/lighthouse-100-performance/)
-
-## Writing it down
-
-Somewhere along the way I started writing on DEV and Medium, mostly about things that confused me until they didn't:
-
-- [How to build a social media feed: the basics & system design](/posts/social-media-feed-algorithm-part-1/)
-- [How to upgrade Prisma ORM (in Express.js)](/posts/upgrade-prisma-v7/)
-- [Idempotency: from a simple API to reliable event-driven systems](/posts/idempotency-event-driven-systems/)
+I'm an **AI and Automation Engineer at IILM**, working on LLM inference, internal tools and automations. Before that I built web apps, APIs and AI chatbots at **Truescholar**, and interned at **Cohyve**. The full story is in [my portfolio](/portfolio/).
 
 ## Now
 
-Building AI tooling and automations at IILM, writing more, and turning this site into a proper home for both.
+Getting that handstand, building AI tooling, and writing more.
 
 Say hi on [GitHub](https://github.com/Manujdixit), [DEV](https://dev.to/manujdixit), or [Medium](https://medium.com/@manujdixit04).
