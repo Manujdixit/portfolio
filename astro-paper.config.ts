@@ -22,6 +22,7 @@ export default defineAstroPaperConfig({
     dynamicOgImage: true,
     showArchives: false,
     showProjects: false,
+    showCollection: false,
     showBackButton: true,
     editPost: { enabled: false },
     search: "pagefind",

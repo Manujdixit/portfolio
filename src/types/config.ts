@@ -47,6 +47,8 @@ interface FeaturesConfig {
   showArchives?: boolean;
   /** Show the /projects page, nav link and homepage section. Defaults to true. */
   showProjects?: boolean;
+  /** Show the /collection page and nav link. Defaults to true. */
+  showCollection?: boolean;
   /** Show back button on post detail pages. Defaults to true. */
   showBackButton?: boolean;
   /** "Edit page" link shown on post detail pages. */

@@ -5,7 +5,17 @@ import Header from "@/components/Header.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import Main from "@/components/Main.astro";
 import Footer from "@/components/Footer.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
 import config from "@/config";
+
+// Redirect to 404 page if `showCollection` config is false
+const notFoundUrl = getRelativeLocaleUrl(
+  Astro.currentLocale ?? config.site.lang,
+  "404"
+);
+if (!config.features.showCollection && notFoundUrl) {
+  return Astro.rewrite(notFoundUrl);
+}
 
 const items = (await getCollection("collection")).sort(
   (a, b) => a.data.order - b.data.order

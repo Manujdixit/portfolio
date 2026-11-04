@@ -29,7 +29,9 @@ export default defineConfig({
         (config.features?.showArchives !== false ||
           !page.endsWith("/archives/")) &&
         (config.features?.showProjects !== false ||
-          !page.endsWith("/projects/")),
+          !page.endsWith("/projects/")) &&
+        (config.features?.showCollection !== false ||
+          !page.endsWith("/collection/")),
     }),
   ],
   i18n: {
