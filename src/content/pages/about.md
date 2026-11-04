@@ -17,4 +17,4 @@ Studying, shipping small projects, and turning this site into a home for my work
 
 ## Get in touch
 
-Find me on [GitHub](https://github.com/Manujdixit).
+Find me on [GitHub](https://github.com/Manujdixit), [DEV](https://dev.to/manujdixit) and [Medium](https://medium.com/@manujdixit).

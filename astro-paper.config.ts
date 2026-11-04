@@ -27,6 +27,8 @@ export default defineAstroPaperConfig({
   },
   socials: [
     { name: "github", url: "https://github.com/Manujdixit" },
+    { name: "devto", url: "https://dev.to/manujdixit", linkTitle: "Manuj Dixit on DEV" },
+    { name: "medium", url: "https://medium.com/@manujdixit" },
   ],
   shareLinks: [
     { name: "whatsapp", url: "https://wa.me/?text=" },
