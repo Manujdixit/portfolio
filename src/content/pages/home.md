@@ -13,4 +13,8 @@ Last year I worked from home. This year I moved to Gurgaon, and on a friend's su
 
 I've run a half marathon, and I'm eyeing a full one next, then an Ironman (fingers crossed 🤞). I'm also close to unlocking the handstand. The rest of the time it's movies, music, and the Bhagavad Gita, which reads differently every time I come back to it.
 
-Say hi on [GitHub](https://github.com/Manujdixit), [DEV](https://dev.to/manujdixit), or [Medium](https://medium.com/@manujdixit04).
+I've come to believe hobbies aren't a break from life; they're a big part of it. Work gives you a title, but hobbies give you energy, perspective, and a version of yourself that doesn't depend on how the last deploy went.
+
+## Let's catch up
+
+Whether it's work, a project idea, running, a movie recommendation, or just a casual chat, I'm always up for it. Reach out on [GitHub](https://github.com/Manujdixit), [DEV](https://dev.to/manujdixit), or [Medium](https://medium.com/@manujdixit04), and if you're in Gurgaon, coffee's on the table.
