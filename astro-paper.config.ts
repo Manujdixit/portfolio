@@ -20,7 +20,7 @@ export default defineAstroPaperConfig({
   features: {
     lightAndDarkMode: true,
     dynamicOgImage: true,
-    showArchives: true,
+    showArchives: false,
     showBackButton: true,
     editPost: { enabled: false },
     search: "pagefind",
@@ -28,7 +28,7 @@ export default defineAstroPaperConfig({
   socials: [
     { name: "github", url: "https://github.com/Manujdixit" },
     { name: "devto", url: "https://dev.to/manujdixit", linkTitle: "Manuj Dixit on DEV" },
-    { name: "medium", url: "https://medium.com/@manujdixit" },
+    { name: "medium", url: "https://medium.com/@manujdixit04" },
   ],
   shareLinks: [
     { name: "whatsapp", url: "https://wa.me/?text=" },
