@@ -9,7 +9,7 @@ For the work stuff, see [my portfolio](/portfolio/). For what I'm learning, read
 
 ## Side quests
 
-- **Ran a half marathon.** 21.1 km. My legs still remember.
+- **Ran a half marathon.** 21.1 km. My legs still remember. Next up: a full marathon, and then an Ironman. Fingers crossed. 🤞
 - **About to unlock the handstand.** Almost there. The wall and I are on close terms.
 - **Movies.** Always up for a good one, and always ready to argue about the ending.
 - **Music.** Pretty much always on, whether I'm coding, running or doing nothing.
