@@ -8,11 +8,18 @@ import Footer from "@/components/Footer.astro";
 import config from "@/config";
 
 const items = (await getCollection("collection")).sort(
-  (a, b) => b.data.added.valueOf() - a.data.added.valueOf()
+  (a, b) => a.data.order - b.data.order
 );
 
 const sections = [
-  { type: "watching", heading: "Watching" },
+  {
+    type: "watching",
+    heading: "Watching",
+    more: {
+      href: "https://letterboxd.com/sensational_01/likes/films/",
+      label: "Films I've liked on Letterboxd",
+    },
+  },
   { type: "listening", heading: "Listening" },
   { type: "reading", heading: "Reading" },
 ] as const;
@@ -29,12 +36,21 @@ const sections = [
     pageDesc="What I'm watching, listening to and reading, and why I liked it."
   >
     {
-      sections.map(({ type, heading }) => {
+      sections.map(section => {
+        const { type, heading } = section;
+        const more = "more" in section ? section.more : undefined;
         const list = items.filter(({ data }) => data.type === type);
         return (
           list.length > 0 && (
             <section class="mb-10">
               <h2 class="text-2xl font-semibold tracking-wide">{heading}</h2>
+              {more && (
+                <p class="mt-1 text-sm">
+                  <a href={more.href} class="underline underline-offset-4">
+                    {more.label}
+                  </a>
+                </p>
+              )}
               <ul>
                 {list.map(({ data }) => (
                   <li class="my-6">
@@ -53,7 +69,7 @@ const sections = [
                     {data.creator && (
                       <p class="text-sm opacity-80">{data.creator}</p>
                     )}
-                    <p class="mt-1">{data.why}</p>
+                    {data.why && <p class="mt-1">{data.why}</p>}
                   </li>
                 ))}
               </ul>

@@ -66,7 +66,7 @@ const experience = defineCollection({
   }),
 });
 
-// What I'm watching, listening to and reading; newest first.
+// What I'm watching, listening to and reading; sorted by `order` within each type.
 const collection = defineCollection({
   loader: file("src/content/collection.json"),
   schema: z.object({
@@ -74,8 +74,8 @@ const collection = defineCollection({
     title: z.string(),
     creator: z.string().optional(),
     url: z.url().optional(),
-    added: z.coerce.date(),
-    why: z.string(),
+    order: z.number(),
+    why: z.string().optional(),
   }),
 });
 
